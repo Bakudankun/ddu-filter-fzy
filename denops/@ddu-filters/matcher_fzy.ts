@@ -2,7 +2,7 @@ import {
   hasMatch,
   positions,
   score,
-} from "https://raw.githubusercontent.com/jhawthorn/fzy.js/master/index.js";
+} from "./fzy.js";
 import {
   BaseFilter,
   DduItem,
