@@ -27,7 +27,7 @@ function precompute_bonus(haystack) {
 	for (var i = 0; i < m; i++) {
 		var ch = haystack[i];
 
-		if (last_ch === '/') {
+		if (last_ch === '/' || last_ch === '\\') {
 			match_bonus[i] = SCORE_MATCH_SLASH;
 		} else if (last_ch === '-' || last_ch === '_' || last_ch === ' ') {
 			match_bonus[i] = SCORE_MATCH_WORD;
