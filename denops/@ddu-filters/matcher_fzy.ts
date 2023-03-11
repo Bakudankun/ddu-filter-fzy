@@ -1,9 +1,9 @@
-import { hasMatch, positions, score } from "./fzy.js";
+import {hasMatch, positions, score} from "./fzy.js";
 import {
   BaseFilter,
   DduItem,
 } from "https://deno.land/x/ddu_vim@v0.14/types.ts";
-import { Denops } from "https://deno.land/x/ddu_vim@v0.14/deps.ts";
+import {Denops} from "https://deno.land/x/ddu_vim@v0.14/deps.ts";
 
 type Params = {
   hlGroup: string;
@@ -14,8 +14,9 @@ type SortItem = {
   item: DduItem;
 };
 
+const te = new TextEncoder();
 function utf8Length(str: string): number {
-  return (new TextEncoder().encode(str)).length;
+  return te.encode(str).length;
 }
 
 export class Filter extends BaseFilter<Params> {
